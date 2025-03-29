@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTracker - Datos de CoinGecko</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CryptoTracker</h1>
+            <p>Datos en tiempo real desde CoinGecko</p>
+        </header>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar criptomoneda...">
+            </div>
+            <div class="filter-container">
+                <select id="sortSelect">
+                    <option value="market_cap_desc">Market Cap (Mayor a Menor)</option>
+                    <option value="market_cap_asc">Market Cap (Menor a Mayor)</option>
+                    <option value="price_desc">Precio (Mayor a Menor)</option>
+                    <option value="price_asc">Precio (Menor a Mayor)</option>
+                </select>
+                <select id="currencySelect">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="jpy">JPY</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="cryptoContainer" class="crypto-grid">
+            <div class="loader">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        
+        <div class="page-controls">
+            <button id="prevPage" disabled>Anterior</button>
+            <button id="nextPage">Siguiente</button>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
