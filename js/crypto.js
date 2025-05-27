@@ -125,7 +125,7 @@ class CryptoController {
     }
 
     this.filteredData.forEach((crypto) => {
-      const priceChange = crypto.price_change_percentage_24h;
+      const priceChange = crypto.price_change_percentage_24h || 0;
       const priceChangeClass = priceChange >= 0 ? "positive" : "negative";
       const priceChangeSign = priceChange >= 0 ? "+" : "";
 

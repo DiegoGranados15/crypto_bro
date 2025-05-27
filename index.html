@@ -3,48 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoTracker - Datos de CoinGecko</title>
+    <title>CryptoTracker - Tu portal de criptomonedas</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>CryptoTracker</h1>
-            <p>Datos en tiempo real desde CoinGecko</p>
-        </header>
-        
-        <div class="search-container">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Buscar criptomoneda...">
+    <!-- Header & Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-coins"></i></span>
+                CryptoTracker
             </div>
-            <div class="filter-container">
-                <select id="sortSelect">
-                    <option value="market_cap_desc">Market Cap (Mayor a Menor)</option>
-                    <option value="market_cap_asc">Market Cap (Menor a Mayor)</option>
-                    <option value="price_desc">Precio (Mayor a Menor)</option>
-                    <option value="price_asc">Precio (Menor a Mayor)</option>
-                </select>
-                <select id="currencySelect">
-                    <option value="usd">USD</option>
-                    <option value="eur">EUR</option>
-                    <option value="jpy">JPY</option>
-                    <option value="gbp">GBP</option>
-                </select>
-            </div>
-        </div>
-        
-        <div id="cryptoContainer" class="crypto-grid">
-            <div class="loader">
-                <div class="spinner"></div>
-            </div>
-        </div>
-        
-        <div class="page-controls">
-            <button id="prevPage" disabled>Anterior</button>
-            <button id="nextPage">Siguiente</button>
-        </div>
-    </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#why-crypto">¿Por qué Crypto?</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="html/crypto.html">Ver Criptos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script src="/js/main.js"></script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>El futuro de las inversiones</h1>
+        <p>Sigue el mercado de criptomonedas en tiempo real y toma decisiones informadas sobre tus inversiones</p>
+        <div class="hero-buttons">
+            <a href="html/crypto.html" class="btn btn-primary">Ver Criptomonedas</a>
+            <a href="#why-crypto" class="btn btn-secondary">¿Por qué invertir?</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2>Quiénes Somos</h2>
+            <p>Conoce más sobre nuestro equipo y misión</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="/api/placeholder/600/400" alt="Equipo CryptoTracker">
+            </div>
+            <div class="about-text">
+                <h3>Expertos en el mundo cripto</h3>
+                <p>CryptoTracker nació en 2025 con una misión clara: democratizar el acceso a la información sobre criptomonedas y hacer que la inversión en activos digitales sea comprensible para todos.</p>
+                <p>Nuestro equipo está formado por expertos en finanzas, desarrolladores blockchain y entusiastas de la tecnología que comparten una pasión por el futuro descentralizado de las finanzas.</p>
+                <p>Utilizamos la API de CoinGecko para proporcionar datos precisos y en tiempo real, permitiéndote tomar decisiones informadas sobre tus inversiones en criptomonedas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Crypto Section -->
+    <section id="why-crypto" class="section why-crypto">
+        <div class="section-header">
+            <h2>¿Por qué invertir en criptomonedas?</h2>
+            <p>Descubre las ventajas de incluir activos digitales en tu cartera de inversión</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Alto potencial de crecimiento</h3>
+                <p>Las criptomonedas han demostrado un potencial de crecimiento significativo en comparación con las inversiones tradicionales, ofreciendo rendimientos que pueden superar al mercado.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Diversificación de cartera</h3>
+                <p>Añadir criptomonedas a tu cartera te permite diversificar tus inversiones y reducir el riesgo general, ya que no están directamente correlacionadas con otros mercados.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Accesibilidad global</h3>
+                <p>Las criptomonedas permiten acceso a inversiones sin fronteras, sin importar tu ubicación geográfica o situación bancaria, democratizando el acceso a los mercados financieros.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Tecnología blockchain</h3>
+                <p>La tecnología subyacente de las criptomonedas ofrece seguridad, transparencia y eliminación de intermediarios, revolucionando múltiples industrias más allá de las finanzas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3>Control sobre tus activos</h3>
+                <p>Con las criptomonedas, tú eres el único dueño de tus activos, sin depender de instituciones centralizadas que controlen tu dinero o impongan restricciones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Innovación financiera</h3>
+                <p>Las criptomonedas representan la vanguardia de la innovación financiera, con nuevas aplicaciones como DeFi, NFTs y más que están creando oportunidades sin precedentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Ubicación</h3>
+                        <p>Av. Tecnología 123, Ciudad Digital</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@cryptotracker.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h3>Teléfono</h3>
+                        <p>+34 612 345 678</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h3>Horario</h3>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Asunto</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-form">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-coins"></i></span>
+                    CryptoTracker
+                </div>
+                <p class="footer-description">Proporcionamos información actualizada sobre el mercado de criptomonedas para que puedas tomar decisiones informadas sobre tus inversiones.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#why-crypto">¿Por qué Crypto?</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="crypto.html">Ver Criptos</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tutorial de inversión</a></li>
+                    <li><a href="#">Glosario de términos</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir las últimas noticias y actualizaciones sobre el mercado cripto.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu email" required>
+                    <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CryptoTracker. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
 </body>
 </html>
