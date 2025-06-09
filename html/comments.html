@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTracker - Comentarios y Favoritas</title>
+    <link rel="stylesheet" href="../css/comments.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-coins"></i></span>
+                CryptoTracker
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="crypto.html">Ver Criptos</a></li>
+                <li><a href="#" class="active">Comentarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1><i class="fas fa-heart"></i> Criptomonedas Favoritas</h1>
+            <p>Comparte tus criptomonedas favoritas y conoce las opiniones de otros inversores</p>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <h2><i class="fas fa-edit"></i> Comparte tu Opinión</h2>
+                <form id="commentForm" class="comment-form">
+                    <div class="form-group">
+                        <label for="userName" class="form-label">
+                            <i class="fas fa-user"></i> Tu Nombre
+                        </label>
+                        <input type="text" id="userName" name="userName" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cryptoName" class="form-label">
+                            <i class="fas fa-coins"></i> Criptomoneda Favorita
+                        </label>
+                        <input type="text" id="cryptoName" name="cryptoName" class="form-control" placeholder="Ej: Bitcoin, Ethereum, Cardano..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating" class="form-label">
+                            <i class="fas fa-star"></i> Calificación
+                        </label>
+                        <div class="rating-container">
+                            <select id="rating" name="rating" class="form-control" required>
+                                <option value="">Selecciona una calificación</option>
+                                <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+                                <option value="4">⭐⭐⭐⭐ Muy Bueno</option>
+                                <option value="3">⭐⭐⭐ Bueno</option>
+                                <option value="2">⭐⭐ Regular</option>
+                                <option value="1">⭐ Malo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="investment" class="form-label">
+                            <i class="fas fa-chart-line"></i> ¿Por qué es tu favorita?
+                        </label>
+                        <select id="investment" name="investment" class="form-control" required>
+                            <option value="">Selecciona una razón</option>
+                            <option value="Potencial de crecimiento">Potencial de crecimiento</option>
+                            <option value="Tecnología innovadora">Tecnología innovadora</option>
+                            <option value="Adopción masiva">Adopción masiva</option>
+                            <option value="Equipo de desarrollo">Equipo de desarrollo</option>
+                            <option value="Caso de uso real">Caso de uso real</option>
+                            <option value="Comunidad fuerte">Comunidad fuerte</option>
+                            <option value="Otra">Otra razón</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment" class="form-label">
+                            <i class="fas fa-comment"></i> Tu Comentario
+                        </label>
+                        <textarea id="comment" name="comment" class="form-control" rows="4" placeholder="Comparte tu experiencia, análisis o predicciones sobre esta criptomoneda..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Publicar Comentario
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalComments">0</h3>
+                        <p>Comentarios Totales</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="uniqueCryptos">0</h3>
+                        <p>Criptos Mencionadas</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="averageRating">0</h3>
+                        <p>Calificación Promedio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="comments-section">
+            <div class="comments-header">
+                <h2><i class="fas fa-comments"></i> Comentarios de la Comunidad</h2>
+                <div class="filter-container">
+                    <select id="sortFilter" class="filter-select">
+                        <option value="newest">Más Recientes</option>
+                        <option value="oldest">Más Antiguos</option>
+                        <option value="highest-rated">Mejor Calificados</option>
+                        <option value="lowest-rated">Menor Calificados</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="commentsContainer" class="comments-container">
+                <div class="no-comments">
+                    <i class="fas fa-comment-slash"></i>
+                    <p>Aún no hay comentarios. ¡Sé el primero en compartir tu criptomoneda favorita!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../js/comments.js"></script>
+</body>
+</html>
