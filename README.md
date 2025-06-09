@@ -55,38 +55,7 @@ crypto_bro/
    - Navega hasta la carpeta del proyecto
    - Haz doble clic en `index.html`
    - O arrastra el archivo al navegador
-
-### Opción 2: Usar un Servidor Local (Recomendado)
-
-#### Con Python:
-
-```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-#### Con Node.js:
-
-```bash
-# Instalar http-server globalmente
-npm install -g http-server
-
-# Ejecutar servidor
-http-server
-```
-
-#### Con PHP:
-
-```bash
-php -S localhost:8000
-```
-
-3. **Accede a la aplicación:**
-   - Abre tu navegador
-   - Ve a `http://localhost:8000`
+   - (Recomendado): Abrir con Live Server
 
 ## 🔧 Configuración de la API
 
